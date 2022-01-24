@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>OOAracGirisBilgileriFormu</class>
+ <widget class="QDialog" name="OOAracGirisBilgileriFormu">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>429</width>
+    <height>390</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QLabel {
+	font: 10pt &quot;Cambria&quot;;
+}
+
+QLabel#lblBaslik {
+ font: bold 14pt &quot;Cambria&quot;;
+}
+
+QLabel#lblSimge {
+ qproperty-pixmap: url(:/simgeler/Simgeler/aracgirisi.png);
+}
+
+QDateTimeEdit {
+ qproperty-displayFormat: 'dd.MM.yyyy / hh.mm';
+ qproperty-calendarPopup: true;
+}
+
+QPushButton#btnKaydet {
+ qproperty-text: 'Kaydet';
+ qproperty-icon: url(:/simgeler/Simgeler/kaydet.png);
+ qproperty-default: true;
+}
+
+QPushButton#btnTemizle {
+ qproperty-text: 'Temizle';
+ qproperty-icon: url(:/simgeler/Simgeler/temizle.png);
+}
+
+QPushButton#btnIptal {
+ qproperty-text: 'İptal';
+ qproperty-icon: url(:/simgeler/Simgeler/iptal.png);
+}
+</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_2">
+   <item row="0" column="0">
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QLabel" name="lblSimge">
+       <property name="minimumSize">
+        <size>
+         <width>32</width>
+         <height>32</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>32</width>
+         <height>32</height>
+        </size>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="lblBaslik">
+       <property name="text">
+        <string>ARAÇ GİRİŞ BİLGİLERİ</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="1" column="0">
+    <widget class="Line" name="line">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="5" column="1">
+      <widget class="QDateEdit" name="deGirisTarihSaat"/>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="lblAracNo">
+       <property name="text">
+        <string>Arac No</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QSpinBox" name="sbAracNo">
+       <property name="buttonSymbols">
+        <enum>QAbstractSpinBox::NoButtons</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="lblPlaka">
+       <property name="text">
+        <string>Plaka</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="lblMarka">
+       <property name="text">
+        <string>Marka</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="lePlaka"/>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLineEdit" name="leMarka"/>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLineEdit" name="leRenk"/>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="lblGirisNedeni">
+       <property name="text">
+        <string>Giriş Nedeni</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="lblRenk">
+       <property name="text">
+        <string>Renk</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QPlainTextEdit" name="pteGirisNedeni"/>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="lblGirisTarihSaati">
+       <property name="text">
+        <string>Giriş Tarih Ve Saati</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="3" column="0">
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnKaydet">
+       <property name="text">
+        <string>Kaydet</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnTemizle">
+       <property name="text">
+        <string>Temizle</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnIptal">
+       <property name="text">
+        <string>İptal</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>btnKaydet</sender>
+   <signal>clicked()</signal>
+   <receiver>OOAracGirisBilgileriFormu</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>193</x>
+     <y>369</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>133</x>
+     <y>378</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnIptal</sender>
+   <signal>clicked()</signal>
+   <receiver>OOAracGirisBilgileriFormu</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>360</x>
+     <y>376</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>363</x>
+     <y>392</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sbAracNo</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>OOAracGirisBilgileriFormu</receiver>
+   <slot>degisiklikVar()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>126</x>
+     <y>68</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>61</x>
+     <y>366</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lePlaka</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>OOAracGirisBilgileriFormu</receiver>
+   <slot>degisiklikVar()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>179</x>
+     <y>90</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>152</x>
+     <y>373</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>leMarka</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>OOAracGirisBilgileriFormu</receiver>
+   <slot>degisiklikVar()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>176</x>
+     <y>120</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>179</x>
+     <y>383</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>leRenk</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>OOAracGirisBilgileriFormu</receiver>
+   <slot>degisiklikVar()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>233</x>
+     <y>167</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>162</x>
+     <y>359</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pteGirisNedeni</sender>
+   <signal>textChanged()</signal>
+   <receiver>OOAracGirisBilgileriFormu</receiver>
+   <slot>degisiklikVar()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>283</x>
+     <y>282</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>281</x>
+     <y>398</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>deGirisTarihSaat</sender>
+   <signal>dateChanged(QDate)</signal>
+   <receiver>OOAracGirisBilgileriFormu</receiver>
+   <slot>degisiklikVar()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>334</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>316</x>
+     <y>391</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>degisiklikVar()</slot>
+ </slots>
+</ui>

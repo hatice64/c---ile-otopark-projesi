@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>OOOtoparkBilgilerFormu</class>
+ <widget class="QDialog" name="OOOtoparkBilgilerFormu">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>448</width>
+    <height>306</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QLabel {
+	font: 10pt &quot;Cambria&quot;;
+}
+
+QLabel#lblBaslik {
+ font: bold 14pt &quot;Cambria&quot;;
+}
+
+QLabel#lblSimge {
+ qproperty-pixmap: url(:/simgeler/Simgeler/otopark.png);
+}
+
+QDateEdit {
+ qproperty-displayFormat: 'dd.MM.yyyy';
+ qproperty-calendarPopup: true;
+}
+
+QPushButton#btnKaydet {
+ qproperty-text: 'Kaydet';
+ qproperty-icon: url(:/simgeler/Simgeler/kaydet.png);
+ qproperty-default: true;
+}
+
+QPushButton#btnTemizle {
+ qproperty-text: 'Temizle';
+ qproperty-icon: url(:/simgeler/Simgeler/temizle.png);
+}
+
+QPushButton#btnIptal {
+ qproperty-text: 'İptal';
+ qproperty-icon: url(:/simgeler/Simgeler/iptal.png);
+}
+</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QLabel" name="lblSimge">
+       <property name="maximumSize">
+        <size>
+         <width>32</width>
+         <height>32</height>
+        </size>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="lblBaslik">
+       <property name="text">
+        <string>OTOPARK BİLGİLERİ</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="Line" name="line">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QGridLayout" name="gridLayout" rowstretch="1,0,0,0,0,0">
+     <item row="0" column="0">
+      <widget class="QLabel" name="lblOtaparkAdi">
+       <property name="text">
+        <string>Otopark Adı</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="lblTelefon">
+       <property name="text">
+        <string>Telefon</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="lblAdres">
+       <property name="text">
+        <string>Adres</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="leOtaparkAdi"/>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="lblKurulusTarihi">
+       <property name="text">
+        <string>Kuruluş Tarihi</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QLineEdit" name="leEposta"/>
+     </item>
+     <item row="5" column="1">
+      <widget class="QLineEdit" name="leInstagram"/>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="lblinstagram">
+       <property name="text">
+        <string>Resmi İnstagram Sayfası</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QPlainTextEdit" name="pteAdres">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>75</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>75</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="lblEposta">
+       <property name="text">
+        <string>E posta</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QDateEdit" name="deKurulusTarihi"/>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLineEdit" name="leTelefon"/>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnKaydet"/>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnTemizle"/>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnIptal"/>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>btnKaydet</sender>
+   <signal>clicked()</signal>
+   <receiver>OOOtoparkBilgilerFormu</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>262</x>
+     <y>433</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>17</x>
+     <y>435</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnIptal</sender>
+   <signal>clicked()</signal>
+   <receiver>OOOtoparkBilgilerFormu</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>435</x>
+     <y>434</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>58</x>
+     <y>441</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>leOtaparkAdi</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>OOOtoparkBilgilerFormu</receiver>
+   <slot>DegisiklikYapildi()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>172</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>31</x>
+     <y>450</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>deKurulusTarihi</sender>
+   <signal>dateChanged(QDate)</signal>
+   <receiver>OOOtoparkBilgilerFormu</receiver>
+   <slot>DegisiklikYapildi()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>258</x>
+     <y>135</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>73</x>
+     <y>445</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pteAdres</sender>
+   <signal>textChanged()</signal>
+   <receiver>OOOtoparkBilgilerFormu</receiver>
+   <slot>DegisiklikYapildi()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>191</x>
+     <y>193</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>86</x>
+     <y>454</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>leTelefon</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>OOOtoparkBilgilerFormu</receiver>
+   <slot>DegisiklikYapildi()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>154</x>
+     <y>279</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>209</x>
+     <y>451</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>leEposta</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>OOOtoparkBilgilerFormu</receiver>
+   <slot>DegisiklikYapildi()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>231</x>
+     <y>326</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>133</x>
+     <y>430</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>leInstagram</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>OOOtoparkBilgilerFormu</receiver>
+   <slot>DegisiklikYapildi()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>143</x>
+     <y>375</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>32</x>
+     <y>405</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>DegisiklikYapildi()</slot>
+ </slots>
+</ui>

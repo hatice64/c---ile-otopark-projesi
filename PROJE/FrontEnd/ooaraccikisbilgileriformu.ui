@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>OOAracCikisBilgileriFormu</class>
+ <widget class="QDialog" name="OOAracCikisBilgileriFormu">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>345</width>
+    <height>239</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QLabel {
+	font: 10pt &quot;Cambria&quot;;
+}
+
+QLabel#lblBaslik {
+ font: bold 14pt &quot;Cambria&quot;;
+}
+
+QLabel#lblSimge {
+ qproperty-pixmap: url(:/simgeler/Simgeler/araccikisi.png);
+}
+
+QDateTimeEdit {
+ qproperty-displayFormat: 'dd.MM.yyyy / hh.mm';
+ qproperty-calendarPopup: true;
+}
+
+QPushButton#btnKaydet {
+ qproperty-text: 'Kaydet';
+ qproperty-icon: url(:/simgeler/Simgeler/kaydet.png);
+ qproperty-default: true;
+}
+
+QPushButton#btnTemizle {
+ qproperty-text: 'Temizle';
+ qproperty-icon: url(:/simgeler/Simgeler/temizle.png);
+}
+
+QPushButton#btnIptal {
+ qproperty-text: 'İptal';
+ qproperty-icon: url(:/simgeler/Simgeler/iptal.png);
+}
+</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_2">
+   <item row="0" column="0">
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QLabel" name="lblSimge">
+       <property name="minimumSize">
+        <size>
+         <width>32</width>
+         <height>32</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>32</width>
+         <height>32</height>
+        </size>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="lblBaslik">
+       <property name="text">
+        <string>ARAÇ ÇIKIŞ BİLGİLERİ</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="1" column="0">
+    <widget class="Line" name="line">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="3" column="1">
+      <widget class="QDoubleSpinBox" name="dsbUcret">
+       <property name="acceptDrops">
+        <bool>false</bool>
+       </property>
+       <property name="wrapping">
+        <bool>false</bool>
+       </property>
+       <property name="readOnly">
+        <bool>false</bool>
+       </property>
+       <property name="buttonSymbols">
+        <enum>QAbstractSpinBox::NoButtons</enum>
+       </property>
+       <property name="accelerated">
+        <bool>false</bool>
+       </property>
+       <property name="keyboardTracking">
+        <bool>true</bool>
+       </property>
+       <property name="prefix">
+        <string notr="true"/>
+       </property>
+       <property name="suffix">
+        <string> TL</string>
+       </property>
+       <property name="singleStep">
+        <double>1.000000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="lblKonum">
+       <property name="text">
+        <string>Konum</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="lblUcret">
+       <property name="text">
+        <string>Ücret</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QComboBox" name="cbKonum">
+       <item>
+        <property name="text">
+         <string>A1</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>A2</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>A3</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>A4</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>A5</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>B1</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>B2</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>B3</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>B4</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>B5</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="lblCikisTarihVeSaati">
+       <property name="text">
+        <string>Aracın Çıkış Tarih Ve Saati</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="lePlaka"/>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="lblPlaka">
+       <property name="text">
+        <string>Plaka</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QDateEdit" name="deCikisTarihSaat"/>
+     </item>
+    </layout>
+   </item>
+   <item row="3" column="0">
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnKaydet">
+       <property name="text">
+        <string>Kaydet</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnTemizle">
+       <property name="text">
+        <string>Temizle</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnIptal">
+       <property name="text">
+        <string>İptal</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>btnKaydet</sender>
+   <signal>clicked()</signal>
+   <receiver>OOAracCikisBilgileriFormu</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>247</x>
+     <y>270</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>131</x>
+     <y>315</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnIptal</sender>
+   <signal>clicked()</signal>
+   <receiver>OOAracCikisBilgileriFormu</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>389</x>
+     <y>275</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>402</x>
+     <y>327</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lePlaka</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>OOAracCikisBilgileriFormu</receiver>
+   <slot>degisiklikVar()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>182</x>
+     <y>123</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>76</x>
+     <y>300</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cbKonum</sender>
+   <signal>currentTextChanged(QString)</signal>
+   <receiver>OOAracCikisBilgileriFormu</receiver>
+   <slot>degisiklikVar()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>281</x>
+     <y>175</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>101</x>
+     <y>236</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>dsbUcret</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>OOAracCikisBilgileriFormu</receiver>
+   <slot>degisiklikVar()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>262</x>
+     <y>203</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>119</x>
+     <y>251</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>degisiklikVar()</slot>
+ </slots>
+</ui>

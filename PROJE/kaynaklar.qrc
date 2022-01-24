@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/simgeler">
+        <file>Simgeler/kaydet.png</file>
+        <file>Simgeler/temizle.png</file>
+        <file>Simgeler/iptal.png</file>
+        <file>Simgeler/otopark.png</file>
+        <file>Simgeler/sube.png</file>
+        <file>Simgeler/standartmusteri.png</file>
+        <file>Simgeler/uyemusteri.png</file>
+        <file>Simgeler/subearama.png</file>
+        <file>Simgeler/uyemusteriarama.png</file>
+        <file>Simgeler/small_car.png</file>
+        <file>Simgeler/car_delete.png</file>
+        <file>Simgeler/Search.png</file>
+    </qresource>
+</RCC>

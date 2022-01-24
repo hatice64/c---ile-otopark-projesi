@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>OOSubeBilgileriFormu</class>
+ <widget class="QDialog" name="OOSubeBilgileriFormu">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>411</width>
+    <height>330</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QLabel {
+	font: 10pt &quot;Cambria&quot;;
+}
+
+QLabel#lblBaslik {
+ font: bold 14pt &quot;Cambria&quot;;
+}
+
+QLabel#lblSimge {
+ qproperty-pixmap: url(:/simgeler/Simgeler/sube.png);
+}
+
+QDateEdit {
+ qproperty-displayFormat: 'dd.MM.yyyy';
+ qproperty-calendarPopup: true;
+}
+
+QPushButton#btnKaydet {
+ qproperty-text: 'Kaydet';
+ qproperty-icon: url(:/simgeler/Simgeler/kaydet.png);
+ qproperty-default: true;
+}
+
+QPushButton#btnTemizle {
+ qproperty-text: 'Temizle';
+ qproperty-icon: url(:/simgeler/Simgeler/temizle.png);
+}
+
+QPushButton#btnIptal {
+ qproperty-text: 'İptal';
+ qproperty-icon: url(:/simgeler/Simgeler/iptal.png);
+}
+</string>
+  </property>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>10</y>
+     <width>401</width>
+     <height>314</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QLabel" name="lblSimge">
+        <property name="minimumSize">
+         <size>
+          <width>32</width>
+          <height>32</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>32</width>
+          <height>32</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="lblBaslik">
+        <property name="text">
+         <string>Şube Bilgileri</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="0">
+     <widget class="Line" name="line">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="lblSubeKodu">
+        <property name="text">
+         <string>Sube Kodu</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="leSubeKodu"/>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="lblSubeAdi">
+        <property name="text">
+         <string>Sube Adı</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="leSubeAdi"/>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="lblKurulusTarihi">
+        <property name="text">
+         <string>Kuruluş Tarihi</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QDateEdit" name="deKurulusTarihi"/>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="lblAdres">
+        <property name="text">
+         <string>Adres</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QPlainTextEdit" name="pteAdres">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>75</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>75</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="lblTelefon">
+        <property name="text">
+         <string>Telefon</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QLineEdit" name="leTelefon"/>
+      </item>
+      <item row="5" column="0">
+       <widget class="QLabel" name="lblEposta">
+        <property name="text">
+         <string>E posta</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="1">
+       <widget class="QLineEdit" name="leEposta"/>
+      </item>
+      <item row="6" column="0">
+       <widget class="QLabel" name="lblinstagram">
+        <property name="text">
+         <string>Resmi İnstagram Sayfası</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="1">
+       <widget class="QLineEdit" name="leInstagram"/>
+      </item>
+     </layout>
+    </item>
+    <item row="3" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnKaydet">
+        <property name="text">
+         <string>Kaydet</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnTemizle">
+        <property name="text">
+         <string>Temizle</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_3">
+        <property name="text">
+         <string>İptal</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>btnKaydet</sender>
+   <signal>clicked()</signal>
+   <receiver>OOSubeBilgileriFormu</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>166</x>
+     <y>309</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>11</x>
+     <y>312</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>OOSubeBilgileriFormu</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>326</x>
+     <y>311</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>321</x>
+     <y>334</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>leSubeKodu</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>OOSubeBilgileriFormu</receiver>
+   <slot>DegisiklikVar()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>148</x>
+     <y>72</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>21</x>
+     <y>325</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>leSubeAdi</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>OOSubeBilgileriFormu</receiver>
+   <slot>DegisiklikVar()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>157</x>
+     <y>98</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>27</x>
+     <y>321</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>deKurulusTarihi</sender>
+   <signal>dateChanged(QDate)</signal>
+   <receiver>OOSubeBilgileriFormu</receiver>
+   <slot>DegisiklikVar()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>172</x>
+     <y>122</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>35</x>
+     <y>295</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pteAdres</sender>
+   <signal>textChanged()</signal>
+   <receiver>OOSubeBilgileriFormu</receiver>
+   <slot>DegisiklikVar()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>200</x>
+     <y>175</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>123</x>
+     <y>308</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>leTelefon</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>OOSubeBilgileriFormu</receiver>
+   <slot>DegisiklikVar()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>219</x>
+     <y>226</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>138</x>
+     <y>316</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>leEposta</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>OOSubeBilgileriFormu</receiver>
+   <slot>DegisiklikVar()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>232</x>
+     <y>252</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>137</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>leInstagram</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>OOSubeBilgileriFormu</receiver>
+   <slot>DegisiklikVar()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>244</x>
+     <y>282</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>46</x>
+     <y>316</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>DegisiklikVar()</slot>
+ </slots>
+</ui>
